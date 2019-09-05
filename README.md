@@ -1,0 +1,2 @@
+# cordova-plugin-BluetoothStatusMonitoring
+Android端蓝牙状态变化监听插件
