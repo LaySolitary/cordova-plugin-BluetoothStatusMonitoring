@@ -19,7 +19,7 @@ import org.json.JSONException;
  */
 public class BluetoothStatusMonitoring extends CordovaPlugin {
 
-    public static final String LOG_TAG = "bluestatus";
+    public static final String LOG_TAG = "BluetoothStatusMonitoring";
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         if (action.equals("getBlutoothStatus")) {

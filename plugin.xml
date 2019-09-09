@@ -19,6 +19,7 @@
 				<param name="ios-package" value="BluetoothStatusMonitoring" />
 			</feature>
 		</config-file>
+		<header-file src="src/ios/BluetoothStatusMonitoring.h" />
 		<source-file src="src/ios/BluetoothStatusMonitoring.m" />
 	</platform>
 </plugin>
