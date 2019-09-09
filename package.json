@@ -1,10 +1,19 @@
 {
-  "name": "BluetoothStatusMonitoring",
+  "name": "cordova-plugin-bluetoothstatusmonitoring",
   "version": "1.0.0",
-  "description": "",
+  "description": "Android端蓝牙状态变化监听插件",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "LaySolitary",
-  "license": "ISC"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaySolitary/cordova-plugin-BluetoothStatusMonitoring.git"
+  },
+  "author": "laysolitary",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/LaySolitary/cordova-plugin-BluetoothStatusMonitoring/issues"
+  },
+  "homepage": "https://github.com/LaySolitary/cordova-plugin-BluetoothStatusMonitoring#readme"
 }
