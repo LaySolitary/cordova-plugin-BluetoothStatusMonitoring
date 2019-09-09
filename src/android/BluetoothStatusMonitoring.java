@@ -33,26 +33,26 @@ public class BluetoothStatusMonitoring extends CordovaPlugin {
                     if (action.equals(BluetoothAdapter.ACTION_STATE_CHANGED)) {
                         int intExtra = intent.getIntExtra(BluetoothAdapter.EXTRA_STATE, BluetoothAdapter.ERROR);
                         if (BluetoothAdapter.STATE_OFF == intExtra) {
-                            PluginResult result = new PluginResult(PluginResult.Status.OK, "蓝牙关闭3");
+                            PluginResult result = new PluginResult(PluginResult.Status.OK, "bluetoothoff");
                             result.setKeepCallback(true);
                             callbackContext.sendPluginResult(result);
                         } else if (BluetoothAdapter.STATE_ON == intExtra) {
-                            PluginResult result = new PluginResult(PluginResult.Status.OK, "蓝牙关闭3");
+                            PluginResult result = new PluginResult(PluginResult.Status.OK, "bluetoothopen");
                             result.setKeepCallback(true);
                             callbackContext.sendPluginResult(result);
                         }
-                    } else if (action.equals(BluetoothDevice.ACTION_ACL_DISCONNECTED)) {
-                        System.out.println("蓝牙已断开");
-                    } else if (action.equals(BluetoothDevice.ACTION_ACL_CONNECTED)) {
-                        System.out.println("蓝牙已连接" );
                     }
                 }
             }, intentFilter);
+            PluginResult result = new PluginResult(PluginResult.Status.OK, args.getString(0));
+            result.setKeepCallback(true);
+            callbackContext.sendPluginResult(result);
            return true;
         }
         return false;
     }
 }
+
 
 
 

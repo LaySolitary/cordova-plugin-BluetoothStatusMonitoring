@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <plugin id="cordova-plugins-BluetoothStatusMonitoring" version="0.0.1" xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android">
 	<name>bluestatus</name>
-	<js-module name="BluetoothStatusMonitoring" src="www/bluestatus.js">
-		<clobbers target="BluetoothStatusMonitoring" />
+	<js-module name="bluestatus" src="www/bluestatus.js">
+		<clobbers target="bluestatus" />
 	</js-module>
 	<platform name="android">
 		<config-file parent="/*" target="res/xml/config.xml">
 			<feature name="BluetoothStatusMonitoring">
-				<param name="android-package" value="com.laysolitary.bluestatus" />
+				<param name="android-package" value="com.laysolitary.bluestatus.BluetoothStatusMonitoring" />
 			</feature>
 		</config-file>
 		<config-file parent="/*" target="AndroidManifest.xml" />
@@ -23,3 +23,4 @@
 		<source-file src="src/ios/BluetoothStatusMonitoring.m" />
 	</platform>
 </plugin>
+

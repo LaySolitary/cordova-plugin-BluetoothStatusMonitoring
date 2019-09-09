@@ -39,10 +39,10 @@
                 message = @"该设备蓝牙未授权,请检查系统设置";
                 break;
             case 4:
-                message = @"该设备尚未打开蓝牙,请在设置中打开";
+                message = @"bluetoothoff";
                 break;
             case 5:
-                message = @"蓝牙已经成功开启,请稍后再试";
+                message = @"bluetoothopen";
                 break;
                 default:
                 break;
@@ -57,3 +57,4 @@
     }
 }
 @end
+
