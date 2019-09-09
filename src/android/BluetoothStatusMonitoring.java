@@ -47,6 +47,17 @@ public class BluetoothStatusMonitoring extends CordovaPlugin {
             PluginResult result = new PluginResult(PluginResult.Status.OK, args.getString(0));
             result.setKeepCallback(true);
             callbackContext.sendPluginResult(result);
+            BluetoothAdapter defaultAdapter = BluetoothAdapter.getDefaultAdapter();
+            if (defaultAdapter.isEnabled()) {
+                PluginResult resultenable = new PluginResult(PluginResult.Status.OK, "bluetoothopen");
+                resultenable.setKeepCallback(true);
+                callbackContext.sendPluginResult(resultenable);
+
+            } else {
+                PluginResult resultenable = new PluginResult(PluginResult.Status.OK, "bluetoothoff");
+                resultenable.setKeepCallback(true);
+                callbackContext.sendPluginResult(resultenable);
+            }
            return true;
         }
         return false;

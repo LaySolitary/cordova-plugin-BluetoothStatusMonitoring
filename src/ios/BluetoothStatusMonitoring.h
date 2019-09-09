@@ -16,6 +16,6 @@
 
 @property(strong,nonatomic)CBCentralManager  *centralManager;
 
-- (void)coolMethod:(CDVInvokedUrlCommand*)command;
+- (void)getBlutoothStatus:(CDVInvokedUrlCommand*)command;
 
 @end 
