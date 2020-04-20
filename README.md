@@ -8,3 +8,6 @@ bluestatus.getBlutoothStatus(arg,function(success),function(error));
  bluestatus.getGPSStatus(arg,function(success),function(error));
  蓝牙打开:gpsopen
  蓝牙关闭:gpsoff
+
+
+参数传递后会返回一次参数，然后再返回相应模块状态
