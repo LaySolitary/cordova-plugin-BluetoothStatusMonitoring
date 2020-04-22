@@ -58,7 +58,7 @@ public class BluetoothStatusMonitoring extends CordovaPlugin {
                 result.setKeepCallback(true);
                 gpsStatusContext.sendPluginResult(result);
             }
-            gpsIsOpen(cordova.getContext());
+            cordova.getContext().registerReceiver(new GpsStatusReceiver(), filter);
             return true;
         }
         return false;
