@@ -52,7 +52,6 @@ public class BluetoothStatusMonitoring extends CordovaPlugin {
             gpsStatusContext = callbackContext;
             IntentFilter filter = new IntentFilter();
             filter.addAction(LocationManager.PROVIDERS_CHANGED_ACTION);
-            cordova.getContext().registerReceiver(new GpsStatusReceiver(), filter);
             if (args.getString(0) != null && args.getString(0) != "") {
                 PluginResult result = new PluginResult(PluginResult.Status.OK, args.getString(0));
                 result.setKeepCallback(true);
@@ -118,8 +117,3 @@ public class BluetoothStatusMonitoring extends CordovaPlugin {
         }
     }
 }
-
-
-
-
-
