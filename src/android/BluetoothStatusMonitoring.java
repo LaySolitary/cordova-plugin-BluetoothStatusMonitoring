@@ -58,6 +58,7 @@ public class BluetoothStatusMonitoring extends CordovaPlugin {
                 gpsStatusContext.sendPluginResult(result);
             }
             cordova.getContext().registerReceiver(new GpsStatusReceiver(), filter);
+            gpsIsOpen(cordova.getContext());
             return true;
         }
         return false;
@@ -75,11 +76,13 @@ public class BluetoothStatusMonitoring extends CordovaPlugin {
         // 通过WLAN或移动网络(3G/2G)确定的位置（也称作AGPS，辅助GPS定位。主要用于在室内或遮盖物（建筑群或茂密的深林等）密集的地方定位）
         boolean network = locationManager.isProviderEnabled(LocationManager.NETWORK_PROVIDER);
         if (gps || network) {
+            System.out.println("gpsopen");
             PluginResult resultenable = new PluginResult(PluginResult.Status.OK, "gpsopen");
             resultenable.setKeepCallback(true);
             gpsStatusContext.sendPluginResult(resultenable);
             return true;
         }
+        System.out.println("gpsoff");
         PluginResult resultenable = new PluginResult(PluginResult.Status.OK, "gpsoff");
         resultenable.setKeepCallback(true);
         gpsStatusContext.sendPluginResult(resultenable);
